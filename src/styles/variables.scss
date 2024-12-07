@@ -1,6 +1,6 @@
 $primary-color: #333;
 $secondary-color: #0a0a0a;
-$text-color: #fdf7f7;
+$text-color: #dfd9d9;
 $link-color: #007bff;
 
 $font-family: "Poppins", serif;
@@ -9,7 +9,13 @@ $normal-font-weight: 500;
 $medium-font-weight: 600;
 $bold-font-weight: 700;
 $font-style: normal;
+$color-titles: #a8a7a7;
 
 $base-font-size: 16px;
 
 $breakpoint: 768px;
+
+$background-linear-colorido: linear-gradient(90deg, #ff7a18, #af002d, #319197, #00b5e2);
+
+
+// comando para compilar scss para css: sass --watch src/styles/styles.scss:src/styles/styles.css

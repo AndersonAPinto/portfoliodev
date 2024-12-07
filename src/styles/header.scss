@@ -42,12 +42,13 @@
   position: fixed;
   top: 50px;
   left: 50px;
-  border: none;
+  border: 1px solid #00000067;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 26px;
   z-index: 999;
   border-radius: 50%;
+  background: #ffffff09;
 
   @include mobile {
     font-size: 20px;
@@ -55,7 +56,8 @@
 
   &:hover {
     background: #1f1d1d;
-    color: wheat;
+    border: none;
+    color: rgb(255, 255, 255);
   }
 
   &--close {

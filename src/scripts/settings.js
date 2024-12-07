@@ -57,3 +57,12 @@ window.addEventListener("load", () => {
     star.style.top = randomY + "vh";
   }
 });
+
+
+const certificadosContainer = document.querySelector('.content-certificados');
+const cards = document.querySelectorAll('.card-c');
+
+// Clonando os certificados para um efeito infinito
+cards.forEach(card => {
+  certificadosContainer.appendChild(card.cloneNode(true)); // Clona cada card
+});

@@ -1,0 +1,158 @@
+.titulo-certificados {
+  margin-bottom: 10%;
+}
+
+.certificados {
+  padding: 0 40px;
+  text-align: center;
+  margin-top: 40px;
+  min-height: 100vh;
+}
+.certificados .content-certificados {
+  display: grid;
+  position: relative;
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+@media (min-width: 319px) {
+  .certificados .content-certificados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 743px) {
+  .certificados .content-certificados {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .certificados .content-certificados {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.certificados .content-certificados .card {
+  display: flex;
+  grid-column: span 4;
+  background-color: #a83333;
+  border: 2px solid #555151;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  padding: 10px;
+  max-width: 350px;
+  animation: scroll-cards 20s linear infinite;
+}
+@media (max-width: 320px) {
+  .certificados .content-certificados .card {
+    display: block;
+    justify-self: center;
+    grid-column: span 2;
+    max-width: 100%;
+  }
+}
+@media (max-width: 743px) {
+  .certificados .content-certificados .card {
+    grid-column: span 3;
+  }
+}
+.certificados .content-certificados .card .fas.fa-award {
+  font-size: 80px;
+  margin-top: 5%;
+  margin-right: 10px;
+}
+.certificados .content-certificados .card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.certificados .content-certificados .card .info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.certificados .content-certificados .card .info p {
+  font-size: 0.8rem;
+  color: #000000;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+@media (max-width: 320px) {
+  .certificados .content-certificados .card .info p {
+    font-size: 2px;
+  }
+}
+.certificados .content-certificados .card-link {
+  text-decoration: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.certificados .content-certificados .card-link-link:hover {
+  background-color: #161616;
+}
+.certificados .content-certificados .card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.certificados .content-certificados::-webkit-scrollbar {
+  display: none;
+}
+@keyframes scroll-cards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.certificados .titulo-techs {
+  margin-top: 100px;
+  font-size: 20px;
+}
+.certificados .icons {
+  display: grid;
+  position: relative;
+  gap: 20px;
+  grid-column: 2/-2;
+  color: #1d1f1d;
+  font-size: 50px;
+  justify-items: center;
+}
+@media (min-width: 319px) {
+  .certificados .icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 743px) {
+  .certificados .icons {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .certificados .icons {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+@media (max-width: 743px) {
+  .certificados .icons {
+    font-size: 50px;
+  }
+}
+@media (max-width: 320px) {
+  .certificados .icons {
+    grid-column: span 1;
+    font-size: 50px;
+  }
+}
+
+/*# sourceMappingURL=certificados.css.map */

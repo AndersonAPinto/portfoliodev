@@ -1,5 +1,5 @@
 @use "./mixins" as *;
-@use "./variables";
+@use "./variables" as *;
 
 .contato {
   @include padding-global;
@@ -12,6 +12,7 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10%;
+    color: #a8a7a7;
   }
 
   .content-contato {
@@ -19,10 +20,9 @@
 
     .form {
       grid-column: span 6;
-      background-color: #f4f4f4;
+      // background-color: #1a1818;
       border-radius: 8px;
       padding: 5px;
-      border: 3px solid #6d676770;
 
       display: block;
 
@@ -32,7 +32,7 @@
 
       @include mobile {
         grid-column: span 2;
-        border: 1px solid #6d676770;
+        
       }
 
       label {
@@ -48,8 +48,9 @@
         padding: 10px;
         margin-bottom: 15px;
         border: none;
-        border-radius: 8px;
+        border-radius: 20px;
         font-size: 16px;
+        font-family: $font-family;
 
         @include tablet {
           width: 90%;
@@ -63,16 +64,20 @@
 
       button {
         padding: 10px 20px;
-        background-color: #4caf50;
-        color: white;
+        background-color: #d5dbd5;
+        color: rgb(0, 0, 0);
+        font-weight: 600;
         border: none;
-        border-radius: 8px;
-        font-size: 16px;
+        border-radius: 20px;
+        font-size: 20px;
         cursor: pointer;
+        width: 95%;
       }
 
       button:hover {
-        background-color: #45a049;
+        background-color: #141414;
+        border: 1px solid #fff;
+        color: white;
       }
     }
 
@@ -81,8 +86,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-family: variables.$font-family;
-      font-weight: variables.$base-font-weight;
+      font-family: $font-family;
+      font-weight: $base-font-weight;
 
       @include tablet {
         grid-column: span 3;
@@ -94,17 +99,25 @@
 
       a {
         display: flex;
-        font-size: 38px;
+        font-size: 30px;
         align-items: center;
         text-decoration: none;
-        color: #333;
+        color: #dad6d6;
         padding: 20px;
         border-radius: 4px;
         width: fit-content;
         cursor: pointer;
+
+        @include tablet {
+          font-size: 20px;
+        }
+
+        @include mobile {
+          font-size: 25px;
+        }
         
         &:hover {
-          background-color: #292121;
+          background-color: #00000044;
         }
       }
 

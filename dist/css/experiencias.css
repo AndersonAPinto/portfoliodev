@@ -1,0 +1,98 @@
+.experiencias {
+  padding: 0 40px;
+  text-align: center;
+  margin-top: 40px;
+  min-height: 100vh;
+}
+.experiencias h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 30px;
+}
+.experiencias .content-experiencias {
+  display: grid;
+  position: relative;
+  gap: 20px;
+}
+@media (min-width: 319px) {
+  .experiencias .content-experiencias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 743px) {
+  .experiencias .content-experiencias {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .experiencias .content-experiencias {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.experiencias .content-experiencias .card {
+  grid-column: span 4;
+  background-color: #fff;
+  border: 1px solid #363333;
+  border-radius: 8px;
+  box-shadow: 0 5px 82px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  color: #363333;
+}
+@media (max-width: 320px) {
+  .experiencias .content-experiencias .card {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 743px) {
+  .experiencias .content-experiencias .card {
+    grid-column: span 2;
+  }
+}
+.experiencias .content-experiencias .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.experiencias .content-experiencias .card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.experiencias .content-experiencias .card .card-content {
+  padding: 10px;
+  text-align: left;
+}
+.experiencias .content-experiencias .card .card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.experiencias .content-experiencias .card .card-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+@media (max-width: 743px) {
+  .experiencias .content-experiencias .card .card-content p {
+    font-size: 12px;
+  }
+}
+.experiencias .content-experiencias .card .card-content .card-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 743px) {
+  .experiencias .content-experiencias .card .card-content .card-link {
+    font-size: 12px;
+  }
+}
+.experiencias .content-experiencias .card .card-content .card-link:hover {
+  background-color: #45a049;
+}
+
+/*# sourceMappingURL=experiencias.css.map */

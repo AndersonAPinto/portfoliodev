@@ -1,0 +1,126 @@
+.contato {
+  padding: 0 40px;
+  min-height: 100vh;
+  text-align: center;
+  margin-top: 40px;
+}
+.contato .titulo-contato h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10%;
+}
+.contato .content-contato {
+  display: grid;
+  position: relative;
+  gap: 20px;
+}
+@media (min-width: 319px) {
+  .contato .content-contato {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 743px) {
+  .contato .content-contato {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .contato .content-contato {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.contato .content-contato .form {
+  grid-column: span 6;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 5px;
+  border: 3px solid rgba(109, 103, 103, 0.4392156863);
+  display: block;
+}
+@media (max-width: 743px) {
+  .contato .content-contato .form {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 320px) {
+  .contato .content-contato .form {
+    grid-column: span 2;
+    border: 1px solid rgba(109, 103, 103, 0.4392156863);
+  }
+}
+.contato .content-contato .form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  text-align: left;
+}
+.contato .content-contato .form input,
+.contato .content-contato .form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+@media (max-width: 743px) {
+  .contato .content-contato .form input,
+  .contato .content-contato .form textarea {
+    width: 90%;
+  }
+}
+.contato .content-contato .form input:focus,
+.contato .content-contato .form textarea:focus {
+  border: 1px solid #333;
+  outline: none;
+}
+.contato .content-contato .form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contato .content-contato .form button:hover {
+  background-color: #45a049;
+}
+.contato .content-contato .redes-sociais {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+}
+@media (max-width: 743px) {
+  .contato .content-contato .redes-sociais {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 320px) {
+  .contato .content-contato .redes-sociais {
+    grid-column: span 2;
+  }
+}
+.contato .content-contato .redes-sociais a {
+  display: flex;
+  font-size: 38px;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 20px;
+  border-radius: 4px;
+  width: fit-content;
+  cursor: pointer;
+}
+.contato .content-contato .redes-sociais a:hover {
+  background-color: #292121;
+}
+.contato .content-contato .redes-sociais a i {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=contato.css.map */

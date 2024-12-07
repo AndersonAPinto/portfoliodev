@@ -1,0 +1,74 @@
+.sobre {
+  padding: 0 40px;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgb(253, 245, 245);
+}
+.sobre .titulo h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 30px;
+}
+.sobre .content-sobre {
+  display: grid;
+  position: relative;
+  gap: 20px;
+}
+@media (min-width: 319px) {
+  .sobre .content-sobre {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 743px) {
+  .sobre .content-sobre {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .sobre .content-sobre {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.sobre .content-sobre .photo {
+  grid-column: span 6;
+}
+.sobre .content-sobre .photo img {
+  border-radius: 10%;
+  width: 100%;
+}
+@media (max-width: 743px) {
+  .sobre .content-sobre .photo {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 320px) {
+  .sobre .content-sobre .photo {
+    grid-column: span 2;
+  }
+}
+.sobre .content-sobre .text {
+  grid-column: span 6;
+  text-align: justify;
+}
+.sobre .content-sobre .text p {
+  font-size: 19px;
+  margin: 0;
+}
+@media (max-width: 743px) {
+  .sobre .content-sobre .text p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 743px) {
+  .sobre .content-sobre .text {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 320px) {
+  .sobre .content-sobre .text {
+    grid-column: span 2;
+    text-align: initial;
+  }
+}
+
+/*# sourceMappingURL=sobre.css.map */
