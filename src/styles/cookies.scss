@@ -1,0 +1,53 @@
+@use "./mixins" as *;
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  @include tablet {
+    justify-content: center;
+    font-size: 17px;
+  }
+
+  @include mobile {
+    justify-content: space-around;
+    font-size: 17px;
+  }
+}
+
+.cookie-consent button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 2px;
+  
+}
+
+.cookie-consent button:hover {
+  background-color: #45a049;
+}
+
+.cookie-consent a {
+  color: #148fc0;
+  text-decoration: underline;
+}
+
+.cookie-consent p {
+  margin: 0;
+}
+
+

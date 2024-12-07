@@ -1,0 +1,30 @@
+@use './mixins' as *;
+
+.footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+    font-size: 20px;
+
+  }
+  
+  .content-footer {
+    @include page-grid(1, 6, 12);
+
+    .footer-text {
+        grid-column: 2/-2;
+
+        p{
+          font-size: 12px;
+        }
+    }
+  }
+
+  #loom-companion-mv3,
+#shadow-host-companion {
+  display: none !important;
+}
+
+  

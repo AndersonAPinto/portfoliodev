@@ -1,0 +1,138 @@
+@use "./mixins" as *;
+
+.titulo-certificados{
+  margin-bottom: 10%;
+}
+
+.certificados {
+  @include padding-global;
+  text-align: center;
+  margin-top: 40px;
+  min-height: 100vh;
+
+  .content-certificados {
+    @include page-grid(2, 6, 12);
+
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    
+    .card {
+      display: flex;
+      grid-column: span 4;
+      background-color: #a83333;
+      border: 2px solid #555151;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      padding: 10px;
+      max-width: 350px;
+      animation: scroll-cards 20s linear infinite;
+
+      @include mobile {
+        display: block;
+        justify-self: center;
+        grid-column: span 2;
+        max-width: 100%;
+      }
+
+      @include tablet {
+        grid-column: span 3;
+        
+      }
+
+      .fas.fa-award {
+        font-size: 80px;
+        margin-top: 5%;
+        margin-right: 10px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: #000000;
+          margin-bottom: 15px;
+          word-wrap: break-word;
+          overflow: hidden;
+          flex-wrap: nowrap;
+
+          @include mobile {
+            font-size: 2px;
+          }
+        }
+
+      
+      }
+
+      &-link {
+        text-decoration: none;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        
+        &-link:hover {
+          background-color: #161616;
+        }
+      }
+
+
+      &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .content-certificados::-webkit-scrollbar {
+    display: none; 
+  }
+
+  @keyframes scroll-cards {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .titulo-techs {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+
+  .icons {
+    @include page-grid(2, 5, 10);
+
+    grid-column: 2 / -2;
+    color: #1d1f1d;
+    font-size: 50px;
+    justify-items: center;
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include mobile {
+      grid-column: span 1;
+      font-size: 50px;
+    }
+  }
+}

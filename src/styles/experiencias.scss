@@ -1,0 +1,87 @@
+@use "./mixins" as *;
+
+.experiencias {
+  @include padding-global;
+  text-align: center;
+  margin-top: 40px;
+  min-height: 100vh;
+
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .content-experiencias {
+    @include page-grid(2, 6, 12);
+
+    .card {
+      grid-column: span 4;
+      background-color: #fff;
+      border: 1px solid #363333;
+      border-radius: 8px;
+      box-shadow: 0 5px 82px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      color: #363333;
+
+      @include mobile {
+        grid-column: span 2;
+      }
+
+      @include tablet {
+        grid-column: span 2;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .card-content {
+        padding: 10px;
+        text-align: left;
+
+        h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+          color: #666;
+          margin-bottom: 15px;
+
+          @include tablet {
+            font-size: 12px;
+          }
+        }
+
+        .card-link {
+          display: inline-block;
+          text-decoration: none;
+          background-color: #4caf50;
+          color: white;
+          padding: 10px 15px;
+          border-radius: 4px;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+
+          @include tablet {
+            font-size: 12px;
+          }
+
+          &:hover {
+            background-color: #45a049;
+          }
+        }
+      }
+    }
+  }
+}

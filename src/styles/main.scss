@@ -1,0 +1,50 @@
+@use 'variables';
+@use 'mixins';
+
+.html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: variables.$font-family;
+  margin: 0;
+  overflow-x: hidden; 
+  height: 100vh;
+  background-color: variables.$secondary-color;
+  color: variables.$text-color;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section {
+  @include mixins.centralizando-section;
+
+  h1, h2 {
+    font-size: 1.5rem;
+    color: variables.$primary-color;
+  }
+
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  h6 {
+    font-size: 15px;
+  }
+ 
+}
+
+
