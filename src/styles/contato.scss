@@ -3,7 +3,7 @@
 
 .contato {
   @include padding-global;
-  min-height: 100vh;
+  min-height: 70vh;
   text-align: center;
   margin-top: 40px;
   
@@ -19,7 +19,7 @@
   .content-contato {
     @include page-grid(2, 6, 12);
 
-    .form {
+    /*.form {
       grid-column: span 6;
       // background-color: #1a1818;
       border-radius: 8px;
@@ -80,6 +80,20 @@
         border: 1px solid #fff;
         color: white;
       }
+    }*/
+
+    .foto-contato {
+      grid-column: span 6;
+
+      @include tablet {
+      grid-column: span 3;
+    }
+
+    img {
+      width: 80%;
+      opacity: 0.8;
+      
+    }
     }
 
     .redes-sociais {
@@ -127,4 +141,40 @@
       }
     }
   }
+  
+  #success-message {
+    @include page-grid(2, 6, 12);
+
+    background-color: rgb(17, 102, 0);
+    width: 96%;
+    border-radius: 20px;
+    padding: 10px;
+    left: 10px;
+    bottom: 44px;
+
+    @include desk {
+      left: 10px;
+      width: 92%;
+    }
+
+    @include tablet {
+      left: 0px;
+      width: 92%;
+      flex-direction: row;
+    }
+
+  }
+}
+span {
+  grid-column: 3/-3;
+
+  @include desk {
+    grid-column: 1/-1;
+  }
+
+  @include tablet {
+    grid-column: 1/-1;
+  }
+
+  
 }
