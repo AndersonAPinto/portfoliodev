@@ -22,12 +22,14 @@
     flex-direction: row;
     white-space: nowrap;
     width: max-content;
-
-    animation: scroll-cards 200s linear infinite;
+    overflow: hidden;
+    //position: relative;
+    animation: scroll-cards 60s linear infinite;
 
     .card-c {
       //grid-column: span 4;
       display:flex;
+      justify-content: space-around;
       align-items: center;
       background-color: #201b1b;
       border: 1px solid #d3be0350;
@@ -36,6 +38,7 @@
       //box-shadow:  0 1px 5px rgb(255, 254, 254);
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
       padding: 10px;
+      //min-width: 350px;
       
       //animation: scroll-cards 20s linear infinite;
 
@@ -103,10 +106,10 @@
 
   @keyframes scroll-cards {
     0% {
-      transform: translateX(0);
+      transform: translateX(5%);
     }
     100% {
-      transform: translateX(-200%);
+      transform: translateX(-100%);
     }
   }
 

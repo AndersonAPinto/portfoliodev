@@ -262,6 +262,7 @@
   display: grid;
   position: relative;
   gap: 20px;
+  align-items: center;
 }
 @media (min-width: 319px) {
   .sobre .content-sobre {
@@ -311,20 +312,22 @@
   grid-column: span 6;
   text-align: justify;
   justify-content: center;
+  font-size: 1.3rem;
 }
 .sobre .content-sobre .text p {
   margin: 0;
   color: rgb(29, 29, 28);
   margin-bottom: 20px;
 }
-@media (max-width: 770px) {
-  .sobre .content-sobre .text p {
-    font-size: 12px;
+@media (max-width: 1024px) {
+  .sobre .content-sobre .text {
+    font-size: 1rem;
   }
 }
 @media (max-width: 770px) {
   .sobre .content-sobre .text {
     grid-column: span 3;
+    font-size: 0.84rem;
   }
 }
 @media (max-width: 320px) {
@@ -665,10 +668,12 @@
   flex-direction: row;
   white-space: nowrap;
   width: max-content;
-  animation: scroll-cards 200s linear infinite;
+  overflow: hidden;
+  animation: scroll-cards 60s linear infinite;
 }
 .certificados .content-certificados .card-c {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   background-color: #201b1b;
   border: 1px solid rgba(211, 190, 3, 0.3137254902);
@@ -729,10 +734,10 @@
 }
 @keyframes scroll-cards {
   0% {
-    transform: translateX(0);
+    transform: translateX(5%);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 }
 .certificados .titulo-techs {

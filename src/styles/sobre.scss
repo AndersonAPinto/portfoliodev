@@ -14,6 +14,7 @@
 
   .content-sobre {
     @include page-grid(2, 6, 12);
+    align-items: center;
   
 
     .photo {
@@ -47,6 +48,7 @@
       grid-column: span 6;
       text-align: justify;
       justify-content: center;
+      font-size: 1.3rem;
       
 
       p {
@@ -54,16 +56,17 @@
         margin: 0;
         color: rgb(29, 29, 28);
         margin-bottom: 20px;
-        
-       
-        @include tablet {
-          font-size: 12px;
-          
-        }
+      
+
+      }
+
+      @include desk {
+        font-size: 1rem;
       }
 
       @include tablet {
         grid-column: span 3;
+        font-size: 0.84rem;
       }
 
       @include mobile {
