@@ -48,13 +48,13 @@
   font-size: 26px;
   z-index: 999;
   border-radius: 50%;
-  background: #ffffff09;
+  background: #ffffff18;
 
   @include mobile {
     font-size: 20px;
     top: 20px;
     left: 10px;
-    background: #ffffff5b;
+    
   }
 
   &:hover {
