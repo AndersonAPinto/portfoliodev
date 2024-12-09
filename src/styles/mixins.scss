@@ -39,6 +39,7 @@
   border-radius: 50%;
   z-index: 2;
   animation: moveRandom 10s linear infinite, twinkle 7s infinite;
+
 }
 
 @keyframes moveRandom {
@@ -52,13 +53,13 @@
 
 @keyframes twinkle {
   0% {
-    opacity: 0.3; /* Começa com uma opacidade baixa */
+    opacity: 0.3; 
   }
   50% {
-    opacity: 1; /* Brilha no meio da animação */
+    opacity: 1; 
   }
   100% {
-    opacity: 0.3; /* Volta para opacidade baixa */
+    opacity: 0.3;
   }
 }
 
@@ -99,7 +100,7 @@
 }
 
 @mixin tablet {
-  @media (max-width: 744px) {
+  @media (max-width: 770px) {
     @content;
   }
 }

@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
     starBackground.appendChild(star);
   }
 
-  // Gerar 20 estrelas em movimento
+  // 30 estrelas em movimento
   for (let i = 0; i < 25; i++) {
     const star = document.createElement("div");
     star.classList.add("star-moving");
